@@ -43,9 +43,48 @@ var add = function (n1, n2) {
         return "1숫자가 아닙니다.";
     }
     if (typeof n2 != "number") {
-        return "2숫자가 아닙니다.";
+        return "3숫자가 아닙니다.";
     }
     return n1 + n2;
 };
 console.log(add(1, 2));
+var Exam = /** @class */ (function () {
+    function Exam() {
+    }
+    return Exam;
+}());
+var examList = new Array();
+var e = new Exam();
+e.name = "e1"; // public 외에는 사용못함. defalut가 퍼블릭
+examList.push(e);
+e = new Exam();
+e.name = "e2";
+examList.push(e);
+console.log(examList);
+//이거 안됨 나자신 바꾸는건 안됨.
+function initList(examList) {
+    examList = null;
+}
+initList(examList);
+var Lotto = /** @class */ (function () {
+    function Lotto() {
+        this.numbers = new Array();
+    }
+    Lotto.prototype.makeNumbers = function () {
+        while (this.numbers.length < 6) {
+            var num = Math.floor(Math.random() * 20) + 1;
+            if (this.numbers.indexOf(num) != -1) {
+                continue;
+            }
+            this.numbers.push(num);
+        }
+    };
+    Lotto.prototype.getNumbers = function () {
+        return this.numbers;
+    };
+    return Lotto;
+}());
+var lot = new Lotto();
+lot.makeNumbers();
+console.log(lot.getNumbers());
 //# sourceMappingURL=privtate.js.map
