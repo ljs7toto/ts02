@@ -162,7 +162,7 @@ class Lotto {
         }
     }
     valiNumbers(num) {
-        return this.numbers.indexOf(num) != -1;
+        return this.numbers.indexOf(num) != -1; // 음수가 나옴 
     }
     getNumbers() {
         return this.numbers;
@@ -174,7 +174,7 @@ let arrs = [new Lotto(), new Lotto(), new Lotto(), new Lotto(), new Lotto()];
 let arrs2 = Array();
 arrs2.push(new Lotto());
 for (let i in arrs) {
-    console.log(arrs[i]);
+    console.log(arrs[i]); //value 값이 나오게
 }
 for (let i = 0, max = arrs.length; i < max; i++) {
     console.log(arrs[i]);
@@ -183,9 +183,9 @@ let mn = new Lotto();
 let lot1 = new Lotto();
 mn = lot1;
 console.log("test");
-let test2 = new Set();
+let test2 = new Set(); //배열과 비슷, value 값 중복 안됨
 test2.add("1");
-test2.add("1");
+test2.add("2");
 for (let i in test) {
     console.log(i);
 }

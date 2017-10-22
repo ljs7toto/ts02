@@ -4,7 +4,7 @@ var Computer;
     Computer[Computer["Laptop"] = 1] = "Laptop";
     Computer[Computer["Netbook"] = 2] = "Netbook";
 })(Computer || (Computer = {}));
-; //열거형 데이터 타입, 이름 그대로 데이터타입 됨
+; //열거형 데이터 타입. 데이터타입에 이름을 부여. 상수의 값을 눈으로 볼수 있게 
 let cp = Computer.Laptop;
 console.log(cp);
 let cp2;

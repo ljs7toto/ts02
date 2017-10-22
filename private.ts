@@ -164,6 +164,8 @@ e.name = "e2";
 examList.push(e);
 console.log(examList);
 
+
+//설계서 같은 
 interface MakeNumbers{
 
 }
@@ -183,7 +185,7 @@ class Lotto implements MakeNumbers{
         }
     }
     private valiNumbers(num:number):boolean{
-        return this.numbers.indexOf(num)!=-1;
+        return this.numbers.indexOf(num)!=-1; // 음수가 나옴 
     }
     public getNumbers():Array<number>{
         return this.numbers;
@@ -202,7 +204,7 @@ arrs2.push(new Lotto());
 
 
 for(let i in arrs){
-    console.log(arrs[i]);
+    console.log(arrs[i]); //value 값이 나오게
 }
 for(let i:number=0, max:number=arrs.length;i<max;i++){
     console.log(arrs[i]);
@@ -214,14 +216,14 @@ let lot1:Lotto = new Lotto();
 mn = lot1;
 
 console.log("test");
-let test2:Set<string> = new Set<string>();
+let test2:Set<string> = new Set<string>();//배열과 비슷, value 값 중복 안됨
 test2.add("1");
-test2.add("1");
+test2.add("2");
 
-for(let i in test){
+for(let i in test){ //test key
     console.log(i);
 }
 
-for(let ttt of test2){
+for(let ttt of test2){ //test value
     console.log(ttt);
 }

@@ -1,4 +1,4 @@
-enum Computer{Desktop, Laptop, Netbook}; //열거형 데이터 타입, 이름 그대로 데이터타입 됨
+enum Computer{Desktop, Laptop, Netbook}; //열거형 데이터 타입. 데이터타입에 이름을 부여. 상수의 값을 눈으로 볼수 있게 
 
 let cp:Computer = Computer.Laptop;
 console.log(cp); 
@@ -71,4 +71,6 @@ console.log("str3===str4 : " + (str33===str44)); //false 객체를 비교하는 
 console.log("str2 equals str4 : " + str33.equals(str44));  //true 
 console.log(str44.toString()); // 값 str 이 나옴 
 console.log(str33.toString()); // 값 str 이 나옴 
+
+
 
